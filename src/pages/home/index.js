@@ -1,22 +1,17 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
-import { Row,Col, Card,Input,Icon,Timeline,Anchor} from 'antd';
+import {Col, Card,Input,Icon,Timeline} from 'antd';
 
 const { Meta } = Card;
-const {Link} = Anchor;
 @connect(({ home, loading }) => ({
   // 连接home.js文件
   home,
   loading: loading.models.home,
 }))
 class Home extends PureComponent {
-  state = {
-    testVal: 'test params',
-  };
 
   componentDidMount() {
     const { dispatch } = this.props;
-    const { testVal } = this.state;
     dispatch({
       type: 'home/fetchCurrent', // action的类型，由home命名空间和其下面的fetch方法构成
       params: ""

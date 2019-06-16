@@ -55,6 +55,13 @@ export default {
           breadcrumbName: '展示',
         },
         {
+          path: '/trans',
+          name: 'trans',
+          icon: 'link',
+          component: './trans/index',
+          breadcrumbName: '传输',
+        },
+        {
           path: 'https://github.com/umijs/umi-blocks/tree/master/ant-design-pro',
           name: 'more-blocks',
           icon: 'block',
